@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Stopwatch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="theme-toggle">
+        <button id="themeBtn">🌙</button>
+    </div>
+
+    <div class="container">
+
+        <h1>Advanced Stopwatch</h1>
+
+        <!-- CIRCLE + DISPLAY -->
+        <div class="circle-wrapper">
+            <svg class="progress-ring" width="260" height="260">
+                <circle class="progress" cx="130" cy="130" r="90" />
+            </svg>
+            <div id="display">00:00:00.000</div>
+        </div>
+
+        <!-- BUTTONS -->
+        <div class="buttons">
+            <button id="start" class="btn green">Start</button>
+            <button id="pause" class="btn yellow">Pause</button>
+            <button id="reset" class="btn red">Reset</button>
+            <button id="lap" class="btn blue">Lap</button>
+        </div>
+
+        <!-- LAPS -->
+        <h2>Laps</h2>
+        <ul id="laps"></ul>
+
+        <!-- ANALYTICS -->
+        <div class="stats">
+            <p>Total Laps: <span id="lapCount">0</span></p>
+            <p>Average Lap: <span id="avgLap">00:00.000</span></p>
+        </div>
+
+        <!-- EXPORT BUTTON -->
+        <button id="exportCSV" class="export">Export CSV</button>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

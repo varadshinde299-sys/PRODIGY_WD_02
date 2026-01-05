@@ -1,0 +1,154 @@
+/* Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+/* Theme */
+body {
+    background: var(--bg);
+    color: var(--text);
+    transition: 0.3s;
+}
+
+:root {
+    --bg: #111;
+    --text: #fff;
+    --card: rgba(255, 255, 255, 0.1);
+}
+
+body.light {
+    --bg: #f4f4f4;
+    --text: #111;
+    --card: rgba(0, 0, 0, 0.15);
+}
+
+/* Container */
+.container {
+    max-width: 450px;
+    margin: 50px auto;
+    padding: 30px;
+    text-align: center;
+    background: var(--card);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.theme-toggle button {
+    background: var(--card);
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Circle Wrapper (fixed version) */
+.circle-wrapper {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    margin: 0 auto 20px auto;
+}
+
+/* Actual circle */
+.progress-ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* FIX CLICK PROBLEM */
+    z-index: 1;
+}
+
+.progress {
+    fill: none;
+    stroke: #2196f3;
+    stroke-width: 12;
+    stroke-linecap: round;
+    stroke-dasharray: 565;
+    stroke-dashoffset: 565;
+}
+
+/* Display */
+#display {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    font-weight: bold;
+    z-index: 5; /* ABOVE CIRCLE */
+}
+
+/* Buttons */
+.buttons {
+    margin-top: 20px;
+    z-index: 10; /* FIX CLICK */
+    position: relative;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin: 6px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    transition: 0.2s;
+}
+
+.green { background: #28a745; }
+.yellow { background: #ffc107; color: #111; }
+.red { background: #dc3545; }
+.blue { background: #007bff; }
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* Laps */
+#laps {
+    margin-top: 15px;
+    max-height: 200px;
+    overflow-y: auto;
+    list-style: none;
+}
+
+#laps li {
+    background: var(--card);
+    padding: 10px;
+    margin: 6px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Stats */
+.stats {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+/* Export Button */
+.export {
+    width: 100%;
+    padding: 12px;
+    background: #7d3cff;
+    color: white;
+    margin-top: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 17px;
+}
